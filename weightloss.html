@@ -1,0 +1,1808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O2 Health Hub — Medical Weight Loss Program Hyderabad</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --black:#07080a;
+  --dark:#0d0f14;
+  --card-bg:#12151c;
+  --card-border:#1e2330;
+  --teal:#00c4a1;
+  --teal-dim:#00c4a120;
+  --teal-mid:#00c4a140;
+  --orange:#ff6b35;
+  --orange-dim:#ff6b3520;
+  --navy:#0a1628;
+  --cream:#f5f0e8;
+  --cream-dark:#ede8de;
+  --white:#ffffff;
+  --text-white:rgba(255,255,255,0.95);
+  --text-dim:rgba(255,255,255,0.45);
+  --text-mid:rgba(255,255,255,0.65);
+  --green:#00d4a0;
+  --red:#ff4545;
+  --section-alt-bg:var(--dark);
+  --note-bg:#1a1400;
+  --note-border:#3a2e00;
+}
+body.light-mode{
+  --black:#f4f6f9;
+  --dark:#eaf0f6;
+  --card-bg:#ffffff;
+  --card-border:#dde3ec;
+  --text-white:rgba(15,20,35,0.95);
+  --text-dim:rgba(15,20,35,0.45);
+  --text-mid:rgba(15,20,35,0.65);
+  --section-alt-bg:#eaf0f6;
+  --note-bg:#fffbea;
+  --note-border:#f0e0a0;
+  --red:#cc2200;
+  --green:#007a50;
+}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--black);
+  color:var(--text-white);
+  overflow-x:hidden;
+  transition:background 0.3s,color 0.3s;
+  padding-bottom:70px;
+}
+@media(max-width:640px){body{padding-bottom:60px;}}
+
+/* ─── NOISE TEXTURE OVERLAY ─── */
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events:none;
+  z-index:9999;
+  opacity:0.4;
+}
+
+/* ─── NAV ─── */
+nav{
+  position:fixed;top:0;left:0;right:0;
+  z-index:100;
+  padding:20px 60px;
+  display:flex;justify-content:space-between;align-items:center;
+  background:linear-gradient(180deg,rgba(7,8,10,0.95) 0%,transparent 100%);
+  backdrop-filter:blur(10px);
+}
+.nav-logo{display:flex;align-items:center;gap:12px;}
+.nav-logo-mark{
+  width:38px;height:38px;
+  background:var(--teal);
+  border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Syne',sans-serif;
+  font-weight:800;font-size:15px;color:var(--black);
+  letter-spacing:-0.5px;
+}
+.nav-brand{font-family:'Syne',sans-serif;font-weight:700;font-size:16px;color:white;letter-spacing:-0.3px;}
+.nav-pill{
+  background:var(--teal);
+  color:var(--black);
+  font-family:'Syne',sans-serif;
+  font-weight:700;font-size:13px;
+  padding:10px 22px;border-radius:50px;
+  text-decoration:none;cursor:pointer;border:none;
+  transition:all 0.2s;
+}
+.nav-pill:hover{background:#00ddb5;transform:translateY(-1px);}
+
+/* ─── HERO ─── */
+.hero{
+  min-height:100vh;
+  display:flex;flex-direction:column;
+  justify-content:center;
+  padding:140px 60px 80px;
+  position:relative;
+  overflow:hidden;
+}
+.hero-glow-1{
+  position:absolute;top:-200px;right:-100px;
+  width:700px;height:700px;border-radius:50%;
+  background:radial-gradient(circle,rgba(0,196,161,0.12) 0%,transparent 70%);
+  pointer-events:none;
+}
+.hero-glow-2{
+  position:absolute;bottom:-200px;left:-200px;
+  width:600px;height:600px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,107,53,0.08) 0%,transparent 70%);
+  pointer-events:none;
+}
+.hero-grid-line{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px);
+  background-size:60px 60px;
+  pointer-events:none;
+}
+.hero-content{position:relative;z-index:2;max-width:1200px;margin:0 auto;width:100%;}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  border:1px solid var(--card-border);
+  border-radius:50px;padding:8px 18px;
+  margin-bottom:36px;
+  background:var(--card-bg);
+}
+.hero-eyebrow-dot{
+  width:7px;height:7px;background:var(--teal);border-radius:50%;
+  box-shadow:0 0 8px var(--teal);
+  animation:breathe 2s ease infinite;
+}
+@keyframes breathe{0%,100%{opacity:1;box-shadow:0 0 8px var(--teal);}50%{opacity:0.5;box-shadow:0 0 4px var(--teal);}}
+.hero-eyebrow-text{font-size:12px;color:var(--text-mid);font-weight:500;letter-spacing:1px;text-transform:uppercase;}
+.hero-headline{
+  font-family:'Syne',sans-serif;
+  font-size:clamp(56px,8vw,110px);
+  font-weight:800;
+  line-height:0.92;
+  letter-spacing:-3px;
+  color:white;
+  margin-bottom:12px;
+}
+.hero-headline .accent{
+  color:transparent;
+  -webkit-text-stroke:1.5px rgba(255,255,255,0.3);
+}
+.hero-headline .teal{color:var(--teal);}
+.hero-sub-row{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:60px;align-items:start;
+  margin-top:48px;
+}
+.hero-desc{
+  font-size:17px;color:var(--text-mid);line-height:1.75;
+  font-weight:300;
+}
+.hero-desc strong{color:white;font-weight:500;}
+.hero-price-block{
+  background:var(--card-bg);
+  border:1px solid var(--card-border);
+  border-radius:24px;
+  padding:28px 32px;
+  position:relative;
+  overflow:hidden;
+}
+.hero-price-block::before{
+  content:'';position:absolute;
+  top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--teal),var(--orange));
+}
+.price-compare{display:flex;align-items:center;gap:20px;margin-bottom:20px;}
+.price-was{
+  font-size:13px;color:var(--text-dim);
+  text-decoration:line-through;
+  line-height:1.4;
+}
+.price-was-num{font-size:22px;display:block;color:var(--red);text-decoration:line-through;}
+.price-arrow{font-size:20px;color:var(--text-dim);}
+.price-now-label{font-size:11px;color:var(--teal);font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px;}
+.price-now-num{
+  font-family:'Syne',sans-serif;
+  font-size:54px;font-weight:800;color:white;line-height:1;letter-spacing:-2px;
+}
+.price-now-num sub{font-size:16px;font-weight:400;color:var(--text-dim);letter-spacing:0;}
+.price-includes{
+  display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px;
+}
+.price-tag{
+  background:rgba(0,196,161,0.1);
+  border:1px solid rgba(0,196,161,0.2);
+  border-radius:50px;
+  padding:4px 12px;
+  font-size:11px;color:var(--teal);font-weight:500;
+}
+.hero-cta-row{display:flex;gap:12px;flex-wrap:wrap;}
+.btn-teal{
+  background:var(--teal);color:var(--black);
+  border:none;border-radius:50px;
+  padding:16px 32px;font-size:15px;font-weight:700;
+  font-family:'Syne',sans-serif;cursor:pointer;
+  text-decoration:none;display:inline-flex;align-items:center;gap:8px;
+  transition:all 0.2s;letter-spacing:-0.3px;
+}
+.btn-teal:hover{background:#00ddb5;transform:translateY(-2px);}
+.btn-ghost{
+  background:transparent;color:white;
+  border:1px solid var(--card-border);
+  border-radius:50px;padding:16px 28px;font-size:15px;font-weight:400;
+  font-family:'DM Sans',sans-serif;cursor:pointer;
+  text-decoration:none;display:inline-flex;align-items:center;gap:8px;
+  transition:all 0.2s;
+}
+.btn-ghost:hover{background:var(--card-bg);border-color:rgba(255,255,255,0.2);}
+
+/* ─── TICKER STRIP ─── */
+.ticker{
+  background:var(--teal);
+  padding:14px 0;overflow:hidden;
+  border-top:1px solid rgba(0,0,0,0.2);
+  border-bottom:1px solid rgba(0,0,0,0.2);
+}
+.ticker-track{
+  display:flex;gap:0;
+  animation:ticker 25s linear infinite;
+  width:max-content;
+}
+@keyframes ticker{from{transform:translateX(0);}to{transform:translateX(-50%);}
+}
+.ticker-item{
+  display:flex;align-items:center;gap:12px;
+  padding:0 32px;
+  font-family:'Syne',sans-serif;
+  font-size:13px;font-weight:700;
+  color:var(--black);letter-spacing:0.5px;white-space:nowrap;
+}
+.ticker-dot{width:5px;height:5px;background:var(--black);border-radius:50%;opacity:0.4;}
+
+/* ─── PROBLEM SECTION ─── */
+.problem-section{
+  padding:100px 60px;
+  background:var(--black);
+  position:relative;overflow:hidden;
+}
+.problem-section::after{
+  content:'';position:absolute;
+  right:-200px;top:50%;transform:translateY(-50%);
+  width:500px;height:500px;border-radius:50%;
+  background:radial-gradient(circle,rgba(0,196,161,0.05) 0%,transparent 70%);
+}
+.problem-inner{max-width:1200px;margin:0 auto;}
+.section-label{
+  font-size:11px;letter-spacing:3px;text-transform:uppercase;
+  color:var(--teal);font-weight:600;margin-bottom:20px;
+  display:flex;align-items:center;gap:10px;
+}
+.section-label::after{content:'';flex:1;height:1px;background:var(--card-border);max-width:60px;}
+.big-title{
+  font-family:'Syne',sans-serif;
+  font-size:clamp(36px,5vw,64px);
+  font-weight:800;line-height:1.05;
+  letter-spacing:-2px;color:white;
+  margin-bottom:16px;
+}
+.big-title .italic{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--teal);}
+.section-body{font-size:16px;color:var(--text-mid);line-height:1.8;max-width:520px;margin-bottom:56px;font-weight:300;}
+.pain-cards{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+}
+.pain-card{
+  background:var(--card-bg);
+  border:1px solid var(--card-border);
+  border-radius:20px;padding:28px 24px;
+  position:relative;overflow:hidden;
+  transition:border-color 0.3s,transform 0.2s;
+  cursor:default;
+}
+.pain-card:hover{border-color:rgba(0,196,161,0.3);transform:translateY(-4px);}
+.pain-card-num{
+  font-family:'Syne',sans-serif;
+  font-size:56px;font-weight:800;
+  color:rgba(255,255,255,0.04);
+  position:absolute;top:12px;right:16px;
+  line-height:1;letter-spacing:-2px;
+}
+.pain-emoji{font-size:28px;margin-bottom:14px;display:block;}
+.pain-title{font-size:16px;font-weight:700;color:white;margin-bottom:8px;font-family:'Syne',sans-serif;}
+.pain-desc{font-size:13px;color:var(--text-dim);line-height:1.6;}
+.pain-card-tag{
+  display:inline-block;margin-top:14px;
+  background:var(--orange-dim);border:1px solid rgba(255,107,53,0.2);
+  border-radius:50px;padding:4px 12px;
+  font-size:11px;color:var(--orange);font-weight:600;
+}
+
+/* ─── STEPS SECTION ─── */
+.steps-section{
+  padding:100px 60px;
+  background:var(--dark);
+  position:relative;
+}
+.steps-section-inner{max-width:1200px;margin:0 auto;}
+.steps-header{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;margin-bottom:64px;}
+.steps-list{display:flex;flex-direction:column;gap:0;}
+.step-row{
+  display:grid;grid-template-columns:80px 1fr;gap:24px;
+  padding:28px 0;
+  border-bottom:1px solid var(--card-border);
+  align-items:center;
+  transition:background 0.2s;
+}
+.step-row:first-child{border-top:1px solid var(--card-border);}
+.step-index{
+  font-family:'Syne',sans-serif;
+  font-size:11px;font-weight:700;
+  color:var(--text-dim);letter-spacing:2px;
+  text-transform:uppercase;
+}
+.step-body-row{display:flex;align-items:center;gap:20px;}
+.step-icon-box{
+  width:52px;height:52px;flex-shrink:0;
+  background:var(--teal-dim);
+  border:1px solid rgba(0,196,161,0.2);
+  border-radius:14px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;
+}
+.step-title{font-size:17px;font-weight:700;color:white;margin-bottom:4px;font-family:'Syne',sans-serif;}
+.step-desc{font-size:13px;color:var(--text-dim);line-height:1.5;}
+.step-badge{
+  margin-left:auto;flex-shrink:0;
+  background:var(--teal-dim);border:1px solid rgba(0,196,161,0.2);
+  border-radius:50px;padding:5px 14px;
+  font-size:11px;color:var(--teal);font-weight:600;white-space:nowrap;
+}
+
+/* ─── WHAT'S INCLUDED ─── */
+.includes-section{
+  padding:100px 60px;background:var(--black);
+}
+.includes-inner{max-width:1200px;margin:0 auto;}
+.includes-header{margin-bottom:64px;}
+.includes-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:2px;
+  background:var(--card-border);
+  border:1px solid var(--card-border);
+  border-radius:24px;overflow:hidden;
+}
+.include-tile{
+  background:var(--card-bg);
+  padding:36px 32px;
+  transition:background 0.2s;
+  position:relative;overflow:hidden;
+}
+.include-tile:hover{background:#161923;}
+.include-tile::before{
+  content:'';position:absolute;
+  top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(0,196,161,0.3),transparent);
+  opacity:0;transition:opacity 0.3s;
+}
+.include-tile:hover::before{opacity:1;}
+.tile-icon{
+  width:52px;height:52px;
+  background:var(--teal-dim);
+  border-radius:14px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:24px;margin-bottom:20px;
+  border:1px solid rgba(0,196,161,0.15);
+}
+.tile-title{font-size:17px;font-weight:700;color:white;margin-bottom:10px;font-family:'Syne',sans-serif;letter-spacing:-0.3px;}
+.tile-desc{font-size:13px;color:var(--text-dim);line-height:1.65;}
+.tile-highlight{
+  display:inline-block;margin-top:14px;
+  font-size:12px;color:var(--teal);font-weight:600;
+}
+
+/* ─── DOCTOR SECTION ─── */
+.doc-section{
+  padding:100px 60px;
+  background:var(--dark);
+  position:relative;overflow:hidden;
+}
+.doc-section-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:3fr 7fr;gap:60px;align-items:start;}
+.doc-visual{position:relative;max-width:280px;}
+.doc-photo-box{
+  background:var(--card-bg);
+  border:1px solid var(--card-border);
+  border-radius:24px;
+  width:100%;
+  aspect-ratio:3/4;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  gap:8px;
+  position:relative;overflow:hidden;
+}
+.doc-photo-box::before{
+  content:'';position:absolute;
+  bottom:0;left:0;right:0;height:120px;
+  background:linear-gradient(transparent,var(--card-bg));
+}
+.doc-photo-box-inner{text-align:center;}
+.doc-photo-icon{font-size:52px;display:block;margin-bottom:6px;}
+.doc-photo-hint{font-size:11px;color:var(--text-dim);}
+.doc-float-card{
+  position:absolute;bottom:0;left:0;right:0;
+  background:var(--black);
+  border-top:1px solid var(--card-border);
+  padding:12px 16px;
+  display:flex;align-items:center;gap:10px;
+  z-index:2;
+}
+.doc-float-avatar{
+  width:36px;height:36px;
+  background:var(--teal);border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;flex-shrink:0;
+}
+.doc-float-name{font-size:13px;font-weight:700;color:white;font-family:'Syne',sans-serif;}
+.doc-float-tag{font-size:10px;color:var(--teal);margin-top:1px;}
+.doc-info .section-label{margin-bottom:20px;}
+.doc-info .big-title{font-size:clamp(32px,4vw,52px);margin-bottom:20px;}
+.creds-stack{display:flex;flex-direction:column;gap:10px;margin-bottom:32px;}
+.cred-row{
+  display:flex;align-items:flex-start;gap:14px;
+  padding:16px 20px;
+  background:var(--card-bg);
+  border:1px solid var(--card-border);
+  border-radius:14px;
+  transition:border-color 0.2s;
+}
+.cred-row:hover{border-color:rgba(0,196,161,0.25);}
+.cred-bar{
+  width:3px;height:100%;min-height:40px;
+  background:var(--teal);border-radius:2px;flex-shrink:0;
+}
+.cred-main{font-size:14px;font-weight:700;color:white;}
+.cred-sub{font-size:12px;color:var(--text-dim);margin-top:2px;}
+.specialties-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px;}
+.spec-pill{
+  background:var(--teal-dim);border:1px solid rgba(0,196,161,0.2);
+  border-radius:50px;padding:6px 14px;
+  font-size:12px;color:var(--teal);font-weight:500;
+}
+
+/* ─── PRICING ─── */
+.pricing-section{
+  padding:100px 60px;background:var(--black);
+}
+.pricing-inner{max-width:1200px;margin:0 auto;}
+.pricing-header{margin-bottom:64px;}
+.plans-row{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+}
+.plan-box{
+  background:var(--card-bg);
+  border:1px solid var(--card-border);
+  border-radius:24px;padding:36px 32px;
+  position:relative;overflow:hidden;
+  transition:border-color 0.3s,transform 0.2s;
+}
+.plan-box:hover{transform:translateY(-6px);}
+.plan-box.featured{
+  background:#0d1f1a;
+  border:1.5px solid var(--teal);
+}
+.plan-box.featured::before{
+  content:'';position:absolute;
+  top:0;left:0;right:0;height:200px;
+  background:radial-gradient(ellipse at 50% 0%,rgba(0,196,161,0.12) 0%,transparent 70%);
+}
+.plan-label{
+  font-size:11px;text-transform:uppercase;letter-spacing:2px;
+  color:var(--text-dim);font-weight:600;margin-bottom:16px;
+}
+.plan-box.featured .plan-label{color:var(--teal);}
+.plan-badge-top{
+  position:absolute;top:20px;right:20px;
+  background:var(--orange);color:white;
+  font-size:10px;font-weight:700;letter-spacing:0.5px;
+  padding:4px 12px;border-radius:50px;
+}
+.plan-amount{
+  font-family:'Syne',sans-serif;
+  font-size:56px;font-weight:800;color:white;
+  line-height:1;letter-spacing:-2px;margin-bottom:4px;
+}
+.plan-amount sup{font-size:20px;font-weight:400;letter-spacing:0;}
+.plan-per{font-size:13px;color:var(--text-dim);margin-bottom:24px;}
+.plan-sep{height:1px;background:var(--card-border);margin-bottom:24px;}
+.plan-box.featured .plan-sep{background:rgba(0,196,161,0.15);}
+.plan-feat-list{list-style:none;display:flex;flex-direction:column;gap:11px;margin-bottom:28px;}
+.plan-feat-list li{
+  font-size:13px;color:var(--text-mid);
+  display:flex;align-items:flex-start;gap:10px;line-height:1.4;
+}
+.plan-feat-list li .ck{
+  color:var(--teal);font-size:14px;flex-shrink:0;margin-top:1px;
+}
+.plan-feat-list li .cx{
+  color:var(--text-dim);font-size:14px;flex-shrink:0;margin-top:1px;
+}
+.plan-box.featured .plan-feat-list li{color:rgba(255,255,255,0.75);}
+.plan-btn{
+  display:block;width:100%;
+  padding:15px;border-radius:50px;
+  font-size:14px;font-weight:700;font-family:'Syne',sans-serif;
+  text-align:center;text-decoration:none;cursor:pointer;
+  border:none;transition:all 0.2s;letter-spacing:-0.2px;
+}
+.plan-btn-ghost{background:transparent;color:white;border:1px solid var(--card-border);}
+.plan-btn-ghost:hover{background:var(--dark);border-color:rgba(255,255,255,0.2);}
+.plan-btn-fill{background:var(--teal);color:var(--black);}
+.plan-btn-fill:hover{background:#00ddb5;}
+
+/* ─── COMPARISON ─── */
+.compare-section{
+  padding:100px 60px;background:var(--dark);
+}
+.compare-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.compare-table{
+  background:var(--card-bg);border:1px solid var(--card-border);
+  border-radius:24px;overflow:hidden;
+}
+.compare-table-head{
+  display:grid;grid-template-columns:1fr 1fr 1fr;
+  padding:16px 24px;
+  background:var(--dark);
+  border-bottom:1px solid var(--card-border);
+}
+.compare-table-head-label{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:var(--text-dim);font-weight:600;}
+.compare-table-head-label.o2{color:var(--teal);}
+.compare-row{
+  display:grid;grid-template-columns:1fr 1fr 1fr;
+  padding:14px 24px;
+  border-bottom:1px solid var(--card-border);
+  align-items:center;
+}
+.compare-row:last-child{border-bottom:none;}
+.compare-row-label{font-size:13px;color:var(--text-dim);}
+.compare-bad{font-size:13px;color:var(--red);font-weight:600;}
+.compare-good{font-size:13px;color:var(--green);font-weight:600;}
+.compare-good.big{font-size:15px;font-family:'Syne',sans-serif;}
+.why-points-stack{display:flex;flex-direction:column;gap:16px;}
+.why-pt{
+  display:flex;gap:16px;
+  padding:20px;
+  background:var(--card-bg);border:1px solid var(--card-border);
+  border-radius:16px;transition:border-color 0.2s;
+}
+.why-pt:hover{border-color:rgba(0,196,161,0.25);}
+.why-pt-icon{
+  width:44px;height:44px;flex-shrink:0;
+  background:var(--teal-dim);border-radius:12px;
+  display:flex;align-items:center;justify-content:center;font-size:18px;
+}
+.why-pt-title{font-size:14px;font-weight:700;color:white;margin-bottom:4px;font-family:'Syne',sans-serif;}
+.why-pt-desc{font-size:12px;color:var(--text-dim);line-height:1.5;}
+
+/* ─── MEDICAL NOTE ─── */
+.note-bar{
+  background:#1a1400;
+  border-top:1px solid #3a2e00;border-bottom:1px solid #3a2e00;
+  padding:28px 60px;
+}
+.note-bar-inner{max-width:1200px;margin:0 auto;display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap;}
+.note-bar-icon{font-size:22px;flex-shrink:0;margin-top:2px;}
+.note-bar-title{font-size:14px;font-weight:700;color:#f5c842;margin-bottom:8px;}
+.note-pills-row{display:flex;flex-wrap:wrap;gap:8px;}
+.note-pill{
+  background:rgba(245,200,66,0.1);border:1px solid rgba(245,200,66,0.2);
+  border-radius:50px;padding:4px 14px;
+  font-size:12px;color:#c9a400;font-weight:500;
+}
+
+/* ─── FORM SECTION ─── */
+.form-section{
+  padding:100px 60px;
+  background:var(--black);
+  position:relative;overflow:hidden;
+}
+.form-glow{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:800px;height:400px;
+  background:radial-gradient(ellipse,rgba(0,196,161,0.05) 0%,transparent 70%);
+  pointer-events:none;
+}
+.form-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;z-index:2;}
+.form-left .big-title{font-size:clamp(32px,4vw,52px);}
+.form-left .section-body{margin-bottom:32px;}
+.form-promises{display:flex;flex-direction:column;gap:12px;}
+.form-promise{display:flex;align-items:center;gap:12px;}
+.form-promise-icon{
+  width:32px;height:32px;flex-shrink:0;
+  background:var(--teal-dim);border-radius:8px;
+  display:flex;align-items:center;justify-content:center;font-size:14px;
+}
+.form-promise-text{font-size:13px;color:var(--text-mid);}
+.form-card{
+  background:white;
+  border-radius:28px;
+  padding:40px 36px;
+}
+.form-card-title{
+  font-family:'Syne',sans-serif;
+  font-size:22px;font-weight:800;color:#0d0f14;
+  letter-spacing:-0.5px;margin-bottom:4px;
+}
+.form-card-sub{font-size:13px;color:#888;margin-bottom:28px;}
+.fgroup{margin-bottom:16px;}
+.fgroup label{
+  display:block;font-size:11px;font-weight:700;
+  color:#999;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:6px;
+}
+.fgroup input,.fgroup select{
+  width:100%;padding:14px 18px;
+  border:1.5px solid #e8e8e8;border-radius:14px;
+  font-size:14px;font-family:'DM Sans',sans-serif;
+  color:#0d0f14;background:#fafafa;outline:none;
+  transition:border-color 0.2s,background 0.2s;
+  -webkit-appearance:none;
+}
+.fgroup input:focus,.fgroup select:focus{border-color:#00c4a1;background:white;}
+.fgroup input::placeholder{color:#bbb;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.fsub{
+  width:100%;margin-top:8px;
+  background:linear-gradient(135deg,#00c4a1,#0891b2);
+  color:white;border:none;border-radius:50px;
+  padding:17px;font-size:15px;font-weight:700;
+  font-family:'Syne',sans-serif;cursor:pointer;
+  letter-spacing:-0.3px;transition:all 0.2s;
+}
+.fsub:hover{opacity:0.9;transform:translateY(-1px);}
+.fdisclaim{font-size:11px;color:#bbb;text-align:center;margin-top:10px;line-height:1.5;}
+.fwhatsapp{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  margin-top:12px;padding:13px;
+  background:#25d366;border-radius:50px;
+  font-size:14px;font-weight:700;color:white;
+  cursor:pointer;border:none;font-family:'Syne',sans-serif;
+  text-decoration:none;transition:all 0.2s;
+}
+.fwhatsapp:hover{background:#20ba5a;}
+
+/* ─── FOOTER ─── */
+footer{
+  background:#050608;
+  padding:40px 60px;
+  border-top:1px solid var(--card-border);
+}
+.footer-inner{max-width:1200px;margin:0 auto;}
+.footer-top{
+  display:flex;justify-content:space-between;align-items:flex-start;
+  padding-bottom:32px;border-bottom:1px solid var(--card-border);
+  margin-bottom:24px;flex-wrap:wrap;gap:24px;
+}
+.footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+.footer-logo-sq{
+  width:36px;height:36px;background:var(--teal);border-radius:9px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Syne',sans-serif;font-weight:800;font-size:13px;color:var(--black);
+}
+.footer-brand-name{font-family:'Syne',sans-serif;font-weight:700;font-size:15px;color:white;}
+.footer-tagline{font-size:12px;color:var(--text-dim);margin-left:46px;}
+.footer-contact-block{text-align:right;}
+.footer-phone{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:white;letter-spacing:-0.5px;}
+.footer-addr{font-size:12px;color:var(--text-dim);margin-top:4px;line-height:1.5;}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.footer-copy{font-size:12px;color:var(--text-dim);}
+.footer-links-row{display:flex;gap:20px;}
+.footer-link{font-size:12px;color:var(--text-dim);text-decoration:none;}
+.footer-link:hover{color:white;}
+
+/* ─── STICKY ─── */
+.sticky-cta{
+  position:fixed;bottom:0;left:0;right:0;z-index:200;
+  background:rgba(13,15,20,0.95);
+  backdrop-filter:blur(16px);
+  border-top:1px solid var(--card-border);
+  padding:16px 60px;
+  display:flex;justify-content:space-between;align-items:center;
+  gap:20px;
+}
+.sticky-left{display:flex;align-items:center;gap:16px;}
+.sticky-badge{
+  background:var(--teal-dim);border:1px solid rgba(0,196,161,0.25);
+  border-radius:50px;padding:5px 14px;
+  font-size:11px;color:var(--teal);font-weight:600;
+}
+.sticky-text{font-size:14px;color:var(--text-mid);}
+.sticky-text strong{color:white;}
+.sticky-right{display:flex;gap:10px;}
+.sticky-call{
+  background:transparent;color:white;
+  border:1px solid var(--card-border);
+  border-radius:50px;padding:11px 22px;
+  font-size:13px;font-weight:600;cursor:pointer;
+  font-family:'Syne',sans-serif;text-decoration:none;
+  transition:all 0.2s;
+}
+.sticky-call:hover{background:var(--card-bg);}
+.sticky-book{
+  background:var(--teal);color:var(--black);
+  border:none;border-radius:50px;padding:11px 24px;
+  font-size:13px;font-weight:700;cursor:pointer;
+  font-family:'Syne',sans-serif;text-decoration:none;
+  transition:all 0.2s;
+}
+.sticky-book:hover{background:#00ddb5;}
+
+/* ─── ANIMATIONS ─── */
+@keyframes slideUp{from{opacity:0;transform:translateY(40px);}to{opacity:1;transform:translateY(0);}}
+.hero-eyebrow{animation:slideUp 0.5s 0.1s ease both;}
+.hero-headline{animation:slideUp 0.6s 0.2s ease both;}
+.hero-sub-row{animation:slideUp 0.7s 0.35s ease both;}
+
+/* ─── LIGHT MODE OVERRIDES ─── */
+body.light-mode .hero{background:linear-gradient(135deg,#0a1628 0%,#0d2040 100%);}
+body.light-mode .problem-section{background:var(--black);}
+body.light-mode .steps-section{background:var(--dark);}
+body.light-mode .includes-section{background:var(--black);}
+body.light-mode .doc-section{background:var(--dark);}
+body.light-mode .pricing-section{background:var(--black);}
+body.light-mode .compare-section{background:var(--dark);}
+body.light-mode .faq-section{background:var(--black);}
+body.light-mode .form-section{background:var(--dark);}
+body.light-mode footer{background:var(--black);}
+body.light-mode .sticky-cta{background:rgba(244,246,249,0.97);border-top-color:var(--card-border);}
+body.light-mode .sticky-text{color:var(--text-mid);}
+body.light-mode .sticky-text strong{color:var(--text-white);}
+body.light-mode .sticky-call{color:var(--text-white);border-color:var(--card-border);}
+body.light-mode .note-bar{background:var(--note-bg);border-color:var(--note-border);}
+body.light-mode .note-bar-title{color:#7a5c00;}
+body.light-mode .note-pill{background:rgba(200,160,0,0.1);color:#7a5c00;border-color:rgba(200,160,0,0.25);}
+body.light-mode .ticker{background:var(--teal);}
+body.light-mode .pain-card-tag{background:rgba(255,107,53,0.1);border-color:rgba(255,107,53,0.2);}
+body.light-mode .hero-price-block{background:rgba(255,255,255,0.08);}
+body.light-mode .hero-eyebrow{background:rgba(255,255,255,0.08);}
+body.light-mode .big-title{color:var(--text-white);}
+body.light-mode .compare-row-label{color:var(--text-mid);}
+body.light-mode .plan-box:not(.featured){background:var(--card-bg);border-color:var(--card-border);}
+body.light-mode .plan-label{color:var(--text-dim);}
+body.light-mode .plan-amount{color:var(--text-white);}
+body.light-mode .plan-per{color:var(--text-dim);}
+body.light-mode .plan-btn-ghost{color:var(--text-white);}
+
+/* ─── THEME TOGGLE ─── */
+.theme-toggle{
+  display:flex;align-items:center;gap:8px;
+  background:var(--card-bg);
+  border:1px solid var(--card-border);
+  border-radius:50px;
+  padding:6px 14px 6px 8px;
+  cursor:pointer;transition:all 0.2s;
+}
+.theme-toggle:hover{border-color:rgba(0,196,161,0.4);}
+.toggle-track{
+  width:36px;height:20px;
+  background:var(--card-border);
+  border-radius:50px;position:relative;
+  transition:background 0.3s;
+}
+.toggle-track.on{background:var(--teal);}
+.toggle-thumb{
+  width:14px;height:14px;
+  background:white;border-radius:50%;
+  position:absolute;top:3px;left:3px;
+  transition:transform 0.3s;
+}
+.toggle-track.on .toggle-thumb{transform:translateX(16px);}
+.toggle-label{font-size:12px;color:var(--text-mid);font-weight:500;white-space:nowrap;}
+
+/* ─── FAQ ─── */
+.faq-section{
+  padding:100px 60px;
+  background:var(--black);
+}
+.faq-inner{max-width:900px;margin:0 auto;}
+.faq-header{margin-bottom:56px;}
+.faq-list{display:flex;flex-direction:column;gap:12px;}
+.faq-item{
+  background:var(--card-bg);
+  border:1px solid var(--card-border);
+  border-radius:16px;
+  overflow:hidden;
+  transition:border-color 0.2s;
+}
+.faq-item.open{border-color:rgba(0,196,161,0.35);}
+.faq-q{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:22px 28px;cursor:pointer;gap:16px;
+  user-select:none;
+}
+.faq-q-text{
+  font-size:16px;font-weight:600;color:var(--text-white);
+  font-family:'Syne',sans-serif;letter-spacing:-0.3px;line-height:1.3;
+}
+.faq-icon{
+  width:28px;height:28px;flex-shrink:0;
+  background:var(--teal-dim);border:1px solid rgba(0,196,161,0.2);
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-size:16px;color:var(--teal);font-weight:700;
+  transition:transform 0.3s,background 0.2s;
+}
+.faq-item.open .faq-icon{transform:rotate(45deg);background:var(--teal);color:var(--black);}
+.faq-a{
+  max-height:0;overflow:hidden;
+  transition:max-height 0.4s ease,padding 0.3s;
+  padding:0 28px;
+}
+.faq-item.open .faq-a{max-height:300px;padding:0 28px 22px;}
+.faq-a-text{
+  font-size:14px;color:var(--text-mid);line-height:1.75;
+  border-top:1px solid var(--card-border);padding-top:16px;
+}
+.faq-a-text strong{color:var(--text-white);font-weight:600;}
+.faq-lead-cta{
+  margin-top:40px;
+  background:var(--card-bg);
+  border:1px solid var(--card-border);
+  border-radius:20px;
+  padding:28px 32px;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:20px;flex-wrap:wrap;
+}
+.faq-lead-text{font-size:15px;color:var(--text-mid);}
+.faq-lead-text strong{color:var(--text-white);display:block;font-size:18px;font-family:'Syne',sans-serif;margin-bottom:4px;letter-spacing:-0.3px;}
+
+/* ─── LOCATION ─── */
+.location-section{
+  padding:100px 60px;
+  background:var(--dark);
+}
+.location-inner{
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:64px;align-items:start;
+}
+.loc-cards{display:flex;flex-direction:column;gap:12px;}
+.loc-card{
+  display:flex;align-items:flex-start;gap:14px;
+  padding:16px 20px;
+  background:var(--card-bg);
+  border:1px solid var(--card-border);
+  border-radius:14px;
+  transition:border-color 0.2s;
+}
+.loc-card:hover{border-color:rgba(0,196,161,0.3);}
+.loc-card-icon{
+  width:40px;height:40px;flex-shrink:0;
+  background:var(--teal-dim);
+  border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;
+}
+.loc-card-title{font-size:14px;font-weight:700;color:var(--text-white);margin-bottom:3px;font-family:'Syne',sans-serif;}
+.loc-card-addr{font-size:12px;color:var(--text-dim);line-height:1.5;}
+.location-map{display:flex;flex-direction:column;gap:12px;}
+.map-frame{
+  width:100%;height:420px;
+  border-radius:20px;
+  overflow:hidden;
+  border:1px solid var(--card-border);
+  background:var(--card-bg);
+}
+.map-directions-btn{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  padding:14px;
+  background:var(--card-bg);
+  border:1px solid var(--card-border);
+  border-radius:14px;
+  font-size:14px;font-weight:600;
+  color:var(--teal);
+  text-decoration:none;
+  font-family:'Syne',sans-serif;
+  transition:all 0.2s;
+}
+.map-directions-btn:hover{background:var(--teal-dim);border-color:rgba(0,196,161,0.3);}
+body.light-mode .location-section{background:var(--dark);}
+
+/* ─── RESPONSIVE TABLET ─── */
+@media(max-width:1024px){
+  nav{padding:16px 28px;}
+  .hero{padding:120px 32px 70px;}
+  .hero-headline{font-size:72px;letter-spacing:-2px;}
+  .hero-sub-row{grid-template-columns:1fr;gap:32px;}
+  .problem-section,.steps-section,.includes-section,.doc-section,
+  .pricing-section,.compare-section,.faq-section,.form-section,.location-section{padding:70px 32px;}
+  .pain-cards{grid-template-columns:1fr 1fr;}
+  .includes-grid{grid-template-columns:1fr 1fr;}
+  .plans-row{grid-template-columns:1fr;}
+  .doc-section-inner{grid-template-columns:1fr;gap:40px;}
+  .doc-visual{max-width:260px;margin:0 auto;}
+  .compare-inner{grid-template-columns:1fr;gap:40px;}
+  .location-inner{grid-template-columns:1fr;gap:36px;}
+  .map-frame{height:300px;}
+  .steps-header{grid-template-columns:1fr;gap:20px;}
+  .form-inner{grid-template-columns:1fr;gap:40px;}
+  .note-bar{padding:24px 32px;}
+  footer{padding:32px 28px;}
+  .footer-top{flex-direction:column;gap:20px;}
+  .footer-contact-block{text-align:left;}
+}
+
+/* ─── RESPONSIVE MOBILE ─── */
+@media(max-width:640px){
+  /* NAV */
+  nav{padding:14px 18px;}
+  .nav-brand{display:none;}
+  .toggle-label{display:none;}
+  .theme-toggle{padding:6px 10px;}
+  .nav-pill{padding:9px 16px;font-size:12px;}
+
+  /* HERO */
+  .hero{padding:100px 18px 56px;}
+  .hero-headline{font-size:clamp(44px,12vw,60px);letter-spacing:-1.5px;line-height:0.95;}
+  .hero-eyebrow{padding:6px 14px;}
+  .hero-eyebrow-text{font-size:11px;}
+  .hero-sub-row{grid-template-columns:1fr;gap:28px;margin-top:32px;}
+  .hero-desc{font-size:15px;line-height:1.7;}
+  .hero-price-block{padding:20px 20px;}
+  .price-compare{flex-direction:column;gap:12px;align-items:flex-start;}
+  .price-arrow{display:none;}
+  .price-was-num{font-size:18px;}
+  .price-now-num{font-size:44px;}
+  .price-includes{gap:5px;}
+  .price-tag{font-size:10px;padding:3px 10px;}
+  .hero-cta-row{flex-direction:column;gap:10px;}
+  .btn-teal,.btn-ghost{width:100%;justify-content:center;padding:15px 24px;font-size:14px;}
+
+  /* TICKER */
+  .ticker-item{font-size:12px;padding:0 20px;}
+
+  /* SECTIONS general */
+  .problem-section,.steps-section,.includes-section,
+  .doc-section,.pricing-section,.compare-section,
+  .faq-section,.form-section,.note-bar{padding:56px 18px;}
+  .section-label{font-size:10px;}
+  .big-title{font-size:clamp(30px,8vw,44px);letter-spacing:-1px;}
+  .section-body{font-size:14px;margin-bottom:36px;}
+
+  /* PAIN CARDS */
+  .pain-cards{grid-template-columns:1fr;gap:14px;}
+  .pain-card{padding:22px 20px;}
+  .pain-title{font-size:15px;}
+  .pain-desc{font-size:12px;}
+
+  /* STEPS */
+  .steps-header{grid-template-columns:1fr;gap:16px;margin-bottom:36px;}
+  .step-row{grid-template-columns:56px 1fr;gap:14px;padding:20px 0;}
+  .step-index{font-size:10px;}
+  .step-body-row{flex-direction:column;align-items:flex-start;gap:12px;}
+  .step-icon-box{width:44px;height:44px;font-size:18px;}
+  .step-title{font-size:15px;}
+  .step-desc{font-size:12px;}
+  .step-badge{margin-left:0;align-self:flex-start;}
+
+  /* INCLUDES */
+  .includes-grid{grid-template-columns:1fr;gap:2px;}
+  .include-tile{padding:24px 20px;}
+  .tile-icon{width:44px;height:44px;font-size:20px;margin-bottom:14px;}
+  .tile-title{font-size:15px;}
+  .tile-desc{font-size:12px;}
+
+  /* DOCTOR */
+  .doc-section-inner{grid-template-columns:1fr;gap:32px;}
+  .doc-visual{max-width:220px;margin:0 auto;}
+  .cred-row{padding:12px 14px;gap:10px;}
+  .cred-main{font-size:13px;}
+  .cred-sub{font-size:11px;}
+  .specialties-row{gap:6px;}
+  .spec-pill{font-size:11px;padding:4px 12px;}
+  .btn-teal{width:100%;justify-content:center;}
+
+  /* PRICING */
+  .plans-row{grid-template-columns:1fr;gap:16px;}
+  .plan-box{padding:28px 22px;}
+  .plan-amount{font-size:44px;}
+  .plan-feat-list li{font-size:12px;}
+  .plan-btn{padding:13px;}
+
+  /* COMPARISON */
+  .compare-inner{grid-template-columns:1fr;gap:36px;}
+  .compare-table-head{padding:12px 16px;}
+  .compare-table-head-label{font-size:10px;}
+  .compare-row{padding:11px 16px;}
+  .compare-row-label{font-size:12px;}
+  .compare-bad,.compare-good{font-size:12px;}
+  .compare-good.big{font-size:13px;}
+  .why-points-stack{gap:12px;}
+  .why-pt{padding:16px;}
+  .why-pt-icon{width:38px;height:38px;font-size:16px;}
+  .why-pt-title{font-size:13px;}
+  .why-pt-desc{font-size:12px;}
+
+  /* FAQ */
+  .faq-q{padding:18px 20px;}
+  .faq-q-text{font-size:14px;}
+  .faq-a{padding:0 20px;}
+  .faq-item.open .faq-a{padding:0 20px 18px;}
+  .faq-a-text{font-size:13px;}
+  .faq-lead-cta{flex-direction:column;gap:16px;padding:22px 20px;}
+  .faq-lead-text{font-size:14px;}
+  .faq-lead-text strong{font-size:16px;}
+  .faq-lead-cta>div{width:100%;display:flex;flex-direction:column;gap:8px;}
+  .faq-lead-cta a{width:100%;text-align:center;justify-content:center;}
+
+  /* NOTE BAR */
+  .note-bar{padding:20px 18px;}
+  .note-bar-inner{gap:12px;}
+  .note-bar-title{font-size:13px;}
+  .note-pills-row{gap:6px;}
+  .note-pill{font-size:11px;padding:4px 10px;}
+
+  /* FORM */
+  .form-inner{grid-template-columns:1fr;gap:32px;}
+  .form-card{padding:28px 20px;}
+  .form-card-title{font-size:18px;}
+  .form-row{grid-template-columns:1fr;}
+  .fgroup input,.fgroup select{padding:13px 14px;font-size:14px;}
+  .fsub{font-size:14px;padding:15px;}
+  .form-promises{gap:10px;}
+  .form-promise-text{font-size:12px;}
+
+  /* LOCATION */
+  .location-section{padding:56px 18px;}
+  .location-inner{grid-template-columns:1fr;gap:28px;}
+  .map-frame{height:260px;}
+  .loc-card{padding:14px 16px;}
+  .loc-card-icon{width:36px;height:36px;font-size:16px;}
+  .loc-card-title{font-size:13px;}
+  .loc-card-addr{font-size:11px;}
+  .map-directions-btn{font-size:13px;padding:12px;}
+
+  /* STICKY */
+  .sticky-cta{
+    padding:12px 18px;
+    flex-direction:row;
+    gap:10px;
+  }
+  .sticky-badge,.sticky-text,.sticky-left{display:none;}
+  .sticky-right{width:100%;gap:8px;}
+  .sticky-call,.sticky-book{
+    flex:1;text-align:center;
+    padding:13px 12px;font-size:13px;
+  }
+
+  /* FOOTER */
+  footer{padding:28px 18px;}
+  .footer-top{flex-direction:column;gap:16px;padding-bottom:20px;}
+  .footer-contact-block{text-align:left;}
+  .footer-phone{font-size:18px;}
+  .footer-bottom{flex-direction:column;gap:10px;align-items:flex-start;}
+  .footer-links-row{flex-wrap:wrap;gap:12px;}
+  .footer-copy{font-size:11px;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div class="nav-logo-mark">O2</div>
+    <span class="nav-brand">O2 Health Hub</span>
+  </div>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <div class="theme-toggle" id="themeToggle" onclick="toggleTheme()">
+      <div class="toggle-track" id="toggleTrack">
+        <div class="toggle-thumb"></div>
+      </div>
+      <span class="toggle-label" id="toggleLabel">☀️ Light</span>
+    </div>
+    <a href="#book" class="nav-pill">Book Consultation →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow-1"></div>
+  <div class="hero-glow-2"></div>
+  <div class="hero-grid-line"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <div class="hero-eyebrow-dot"></div>
+      <span class="hero-eyebrow-text">Medically Supervised Weight Loss · Hyderabad</span>
+    </div>
+    <div class="hero-headline">
+      LOSE WEIGHT.<br>
+      <span class="accent">NOT YOUR</span><br>
+      <span class="teal">MIND.</span>
+    </div>
+    <div class="hero-sub-row">
+      <div class="hero-desc">
+        Not another crash diet. Not a gym program.<br>
+        A <strong>doctor-prescribed Semaglutide program</strong> — paired with a certified dietitian — designed for real, medically supervised weight loss. Month by month. Right here in Hyderabad.
+        <br><br>
+        Led by <strong>Dr. Thrivikram S.</strong> — MD, PhD Functional Medicine (UK)
+      </div>
+      <div class="hero-price-block">
+        <div class="price-compare">
+          <div>
+            <span class="price-was">Ozempic (branded) costs</span>
+            <span class="price-was price-was-num">₹10,000/mo</span>
+          </div>
+          <span class="price-arrow">→</span>
+          <div>
+            <div class="price-now-label">Our plan starts at</div>
+            <div class="price-now-num">₹1,999<sub>/mo</sub></div>
+          </div>
+        </div>
+        <div class="price-includes">
+          <span class="price-tag">✓ Doctor Consultation</span>
+          <span class="price-tag">✓ Semaglutide Rx</span>
+          <span class="price-tag">✓ Certified Dietitian</span>
+          <span class="price-tag">✓ Monthly Tracking</span>
+        </div>
+        <div class="hero-cta-row">
+          <a href="#book" class="btn-teal">Book Free Consultation →</a>
+          <a href="tel:9392205443" class="btn-ghost">📞 9392205443</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-track">
+    <span class="ticker-item">Doctor Supervised<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Certified Dietitian<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Indian Semaglutide Generic<span class="ticker-dot"></span></span>
+    <span class="ticker-item">₹1,999 / Month<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Hyderabad Based<span class="ticker-dot"></span></span>
+    <span class="ticker-item">PCOS · Thyroid · Diabetes<span class="ticker-dot"></span></span>
+    <span class="ticker-item">WhatsApp Support<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Monthly Progress Tracking<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Doctor Supervised<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Certified Dietitian<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Indian Semaglutide Generic<span class="ticker-dot"></span></span>
+    <span class="ticker-item">₹1,999 / Month<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Hyderabad Based<span class="ticker-dot"></span></span>
+    <span class="ticker-item">PCOS · Thyroid · Diabetes<span class="ticker-dot"></span></span>
+    <span class="ticker-item">WhatsApp Support<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Monthly Progress Tracking<span class="ticker-dot"></span></span>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<section class="problem-section">
+  <div class="problem-inner">
+    <div class="section-label">The Problem</div>
+    <h2 class="big-title">Why most weight loss<br><span class="italic">programs fail you.</span></h2>
+    <p class="section-body">The problem isn't your willpower. It's that nobody looked at your actual medical condition. Thyroid. PCOS. Insulin resistance. Hormones. These aren't lifestyle issues — they're medical ones.</p>
+    <div class="pain-cards">
+      <div class="pain-card">
+        <div class="pain-card-num">01</div>
+        <span class="pain-emoji">🥗</span>
+        <div class="pain-title">Generic Diet Charts</div>
+        <div class="pain-desc">Downloaded from the internet. Not built for your body, your blood work, or your food habits. Works for nobody.</div>
+        <span class="pain-card-tag">Sound familiar?</span>
+      </div>
+      <div class="pain-card">
+        <div class="pain-card-num">02</div>
+        <span class="pain-emoji">💊</span>
+        <div class="pain-title">Ozempic at ₹10,000/mo</div>
+        <div class="pain-desc">Clinically proven. But unaffordable for most. And buying it without a doctor's supervision? Dangerous.</div>
+        <span class="pain-card-tag">Not anymore.</span>
+      </div>
+      <div class="pain-card">
+        <div class="pain-card-num">03</div>
+        <span class="pain-emoji">😮‍💨</span>
+        <div class="pain-title">No Root Cause Diagnosis</div>
+        <div class="pain-desc">Most programs treat symptoms, not causes. Weight gain from PCOS needs a completely different approach than stress-eating.</div>
+        <span class="pain-card-tag">We fix this.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section class="steps-section">
+  <div class="steps-section-inner">
+    <div class="steps-header">
+      <div>
+        <div class="section-label">How It Works</div>
+        <h2 class="big-title">Four steps.<br><span class="italic">Real results.</span></h2>
+      </div>
+      <p class="section-body" style="margin-bottom:0;">A structured medical program — not a subscription box. Every step is designed by Dr. Thrivikram to deliver measurable monthly progress.</p>
+    </div>
+    <div class="steps-list">
+      <div class="step-row">
+        <div class="step-index">STEP 01</div>
+        <div class="step-body-row">
+          <div class="step-icon-box">🩺</div>
+          <div>
+            <div class="step-title">Doctor Assessment</div>
+            <div class="step-desc">Full medical evaluation — thyroid, blood sugar, insulin resistance, hormones, BP. We find your root cause before prescribing anything.</div>
+          </div>
+          <div class="step-badge">Month 1</div>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-index">STEP 02</div>
+        <div class="step-body-row">
+          <div class="step-icon-box">💊</div>
+          <div>
+            <div class="step-title">Semaglutide Prescription</div>
+            <div class="step-desc">If clinically appropriate, Dr. Thrivikram prescribes Indian generic Semaglutide at the right dosage for your body. Monitored and safe.</div>
+          </div>
+          <div class="step-badge">Week 2</div>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-index">STEP 03</div>
+        <div class="step-body-row">
+          <div class="step-icon-box">🥗</div>
+          <div>
+            <div class="step-title">Custom Dietitian Plan</div>
+            <div class="step-desc">Our certified dietitian builds your monthly meal plan — around your Telugu food habits, your schedule, your medical condition.</div>
+          </div>
+          <div class="step-badge">Week 2</div>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-index">STEP 04</div>
+        <div class="step-body-row">
+          <div class="step-icon-box">📊</div>
+          <div>
+            <div class="step-title">Monthly Review & Adjust</div>
+            <div class="step-desc">Weight, blood sugar, BP — tracked every month. Your plan gets adjusted as your body responds. WhatsApp support in between visits.</div>
+          </div>
+          <div class="step-badge">Every month</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INCLUDES -->
+<section class="includes-section">
+  <div class="includes-inner">
+    <div class="includes-header">
+      <div class="section-label">What's Included</div>
+      <h2 class="big-title">Everything. <span class="italic">One price.</span></h2>
+      <p class="section-body">No separate dietitian fee. No hidden follow-up cost. No surprise charges. One monthly plan — covers your doctor, your medication, your diet, your tracking.</p>
+    </div>
+    <div class="includes-grid">
+      <div class="include-tile">
+        <div class="tile-icon">🩺</div>
+        <div class="tile-title">Specialist Doctor</div>
+        <div class="tile-desc">Monthly consultation with Dr. Thrivikram S. — MD, PhD. Full health assessment, prescription review and progress evaluation every month.</div>
+        <span class="tile-highlight">Dr. Thrivikram S. →</span>
+      </div>
+      <div class="include-tile">
+        <div class="tile-icon">💊</div>
+        <div class="tile-title">Semaglutide Program</div>
+        <div class="tile-desc">Indian generic Semaglutide — same active ingredient as Ozempic. Prescribed and monitored by our doctor. Safe, clinically approved, affordable.</div>
+        <span class="tile-highlight">Doctor prescribed →</span>
+      </div>
+      <div class="include-tile">
+        <div class="tile-icon">🥗</div>
+        <div class="tile-title">Certified Dietitian Plan</div>
+        <div class="tile-desc">Custom monthly meal plan built around your lifestyle, medical condition and food preferences. Updated every month as you progress.</div>
+        <span class="tile-highlight">Personalised →</span>
+      </div>
+      <div class="include-tile">
+        <div class="tile-icon">📊</div>
+        <div class="tile-title">Monthly Health Tracking</div>
+        <div class="tile-desc">Weight, blood sugar, BP — tracked and compared every single month. Progress in numbers, not vague feelings.</div>
+        <span class="tile-highlight">Data-driven →</span>
+      </div>
+      <div class="include-tile">
+        <div class="tile-icon">💬</div>
+        <div class="tile-title">WhatsApp Support</div>
+        <div class="tile-desc">Questions between visits? Our team is on WhatsApp. No waiting for your next appointment to get clarity or reassurance.</div>
+        <span class="tile-highlight">Always available →</span>
+      </div>
+      <div class="include-tile">
+        <div class="tile-icon">🏥</div>
+        <div class="tile-title">6 Specialties · One Roof</div>
+        <div class="tile-desc">Cardiology, Orthopaedics, Gynaecology, Dermatology, ENT, General Medicine — all in one place. No referral runaround.</div>
+        <span class="tile-highlight">O2 Health Hub →</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOCTOR -->
+<section class="doc-section">
+  <div class="doc-section-inner">
+    <div class="doc-visual">
+      <div class="doc-photo-box">
+        <div class="doc-photo-box-inner">
+          <span class="doc-photo-icon">👨‍⚕️</span>
+          <p class="doc-photo-hint">Doctor photo goes here</p>
+        </div>
+        <div class="doc-float-card">
+          <div class="doc-float-avatar">🩺</div>
+          <div>
+            <div class="doc-float-name">Dr. Thrivikram S.</div>
+            <div class="doc-float-tag">O2 Health Hub · Hyderabad</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="doc-info">
+      <div class="section-label">Your Doctor</div>
+      <h2 class="big-title">Expert care.<br><span class="italic">Real credentials.</span></h2>
+      <div class="creds-stack">
+        <div class="cred-row">
+          <div class="cred-bar"></div>
+          <div>
+            <div class="cred-main">MD — General Physician</div>
+            <div class="cred-sub">Medical Doctor, full internal medicine training</div>
+          </div>
+        </div>
+        <div class="cred-row">
+          <div class="cred-bar"></div>
+          <div>
+            <div class="cred-main">PGD Diab — Post Graduate Diploma in Diabetology</div>
+            <div class="cred-sub">Specialist in diabetes management and treatment</div>
+          </div>
+        </div>
+        <div class="cred-row">
+          <div class="cred-bar"></div>
+          <div>
+            <div class="cred-main">F.Diab · F.Card</div>
+            <div class="cred-sub">Fellowship in Diabetology & Cardiology</div>
+          </div>
+        </div>
+        <div class="cred-row">
+          <div class="cred-bar"></div>
+          <div>
+            <div class="cred-main">PhD — Integrative, Alternative & Functional Medicine</div>
+            <div class="cred-sub">University of UK · Root-cause medical approach</div>
+          </div>
+        </div>
+      </div>
+      <div class="specialties-row">
+        <span class="spec-pill">Diabetes</span>
+        <span class="spec-pill">Obesity</span>
+        <span class="spec-pill">Weight Management</span>
+        <span class="spec-pill">PCOS</span>
+        <span class="spec-pill">Thyroid</span>
+        <span class="spec-pill">Metabolic Health</span>
+        <span class="spec-pill">Hypertension</span>
+      </div>
+      <a href="#book" class="btn-teal">Book with Dr. Thrivikram →</a>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing-section">
+  <div class="pricing-inner">
+    <div class="pricing-header">
+      <div class="section-label">Pricing</div>
+      <h2 class="big-title">Simple pricing.<br><span class="italic">No surprises.</span></h2>
+      <p class="section-body">All plans include doctor consultation, dietitian and tracking. Pick based on how much support you want. Upgrade or downgrade any month.</p>
+    </div>
+    <div class="plans-row">
+      <div class="plan-box">
+        <div class="plan-label">Starter</div>
+        <div class="plan-amount"><sup>₹</sup>1,999</div>
+        <div class="plan-per">per month</div>
+        <div class="plan-sep"></div>
+        <ul class="plan-feat-list">
+          <li><span class="ck">✓</span>Doctor consultation (1x/month)</li>
+          <li><span class="ck">✓</span>Basic personalised diet plan</li>
+          <li><span class="ck">✓</span>Weight & BP tracking</li>
+          <li><span class="ck">✓</span>Semaglutide prescription (if eligible)</li>
+          <li><span class="ck">✓</span>WhatsApp support</li>
+          <li><span class="cx">–</span>Blood work analysis</li>
+          <li><span class="cx">–</span>Priority support line</li>
+        </ul>
+        <a href="#book" class="plan-btn plan-btn-ghost">Get Started</a>
+      </div>
+      <div class="plan-box featured">
+        <div class="plan-badge-top">MOST POPULAR</div>
+        <div class="plan-label">Advanced</div>
+        <div class="plan-amount"><sup>₹</sup>2,999</div>
+        <div class="plan-per">per month</div>
+        <div class="plan-sep"></div>
+        <ul class="plan-feat-list">
+          <li><span class="ck">✓</span>Doctor consultation (2x/month)</li>
+          <li><span class="ck">✓</span>Custom dietitian meal plan (updated monthly)</li>
+          <li><span class="ck">✓</span>Full blood work analysis</li>
+          <li><span class="ck">✓</span>Semaglutide + dosage fine-tuning</li>
+          <li><span class="ck">✓</span>Priority WhatsApp support</li>
+          <li><span class="ck">✓</span>Monthly progress report PDF</li>
+          <li><span class="ck">✓</span>Thyroid & PCOS monitoring</li>
+        </ul>
+        <a href="#book" class="plan-btn plan-btn-fill">Get Started</a>
+      </div>
+      <div class="plan-box">
+        <div class="plan-label">Comprehensive</div>
+        <div class="plan-amount"><sup>₹</sup>4,999</div>
+        <div class="plan-per">per month</div>
+        <div class="plan-sep"></div>
+        <ul class="plan-feat-list">
+          <li><span class="ck">✓</span>Unlimited doctor visits</li>
+          <li><span class="ck">✓</span>Weekly dietitian check-ins</li>
+          <li><span class="ck">✓</span>Full metabolic panel every month</li>
+          <li><span class="ck">✓</span>Semaglutide + full hormone support</li>
+          <li><span class="ck">✓</span>24hr WhatsApp doctor line</li>
+          <li><span class="ck">✓</span>Diabetes & BP co-management</li>
+          <li><span class="ck">✓</span>Family add-on available</li>
+        </ul>
+        <a href="#book" class="plan-btn plan-btn-ghost">Get Started</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section class="compare-section">
+  <div class="compare-inner">
+    <div>
+      <div class="section-label">Why O2</div>
+      <h2 class="big-title">Us vs<br><span class="italic">the alternatives.</span></h2>
+      <div class="compare-table">
+        <div class="compare-table-head">
+          <span class="compare-table-head-label">What you get</span>
+          <span class="compare-table-head-label">Others</span>
+          <span class="compare-table-head-label o2">O2 Health Hub</span>
+        </div>
+        <div class="compare-row">
+          <span class="compare-row-label">Monthly cost</span>
+          <span class="compare-bad">₹10,000+</span>
+          <span class="compare-good big">₹1,999</span>
+        </div>
+        <div class="compare-row">
+          <span class="compare-row-label">Doctor supervision</span>
+          <span class="compare-bad">Rarely</span>
+          <span class="compare-good">Every month</span>
+        </div>
+        <div class="compare-row">
+          <span class="compare-row-label">Dietitian included</span>
+          <span class="compare-bad">Extra charge</span>
+          <span class="compare-good">Included</span>
+        </div>
+        <div class="compare-row">
+          <span class="compare-row-label">Root cause diagnosis</span>
+          <span class="compare-bad">Never</span>
+          <span class="compare-good">Always</span>
+        </div>
+        <div class="compare-row">
+          <span class="compare-row-label">Semaglutide guidance</span>
+          <span class="compare-bad">Self-managed</span>
+          <span class="compare-good">Doctor prescribed</span>
+        </div>
+        <div class="compare-row">
+          <span class="compare-row-label">Hyderabad walk-in</span>
+          <span class="compare-bad">No</span>
+          <span class="compare-good">Yes</span>
+        </div>
+      </div>
+    </div>
+    <div class="why-points-stack">
+      <div class="why-pt">
+        <div class="why-pt-icon">🔬</div>
+        <div>
+          <div class="why-pt-title">Same science. Different price.</div>
+          <div class="why-pt-desc">Indian generic Semaglutide is the same molecule as Ozempic — manufactured by Dr. Reddy's, Sun Pharma, Cipla. Clinically identical. Fraction of the cost.</div>
+        </div>
+      </div>
+      <div class="why-pt">
+        <div class="why-pt-icon">👨‍⚕️</div>
+        <div>
+          <div class="why-pt-title">A real doctor. Not an app.</div>
+          <div class="why-pt-desc">Dr. Thrivikram has MD + PhD credentials. He reviews your blood work personally. Not a chatbot. Not a template. Not a 5-minute rush consultation.</div>
+        </div>
+      </div>
+      <div class="why-pt">
+        <div class="why-pt-icon">🥗</div>
+        <div>
+          <div class="why-pt-title">Built for Indian lifestyles.</div>
+          <div class="why-pt-desc">Our dietitian understands biryani, festival seasons, Telugu vegetarian diets. Not a Western calorie chart with foods you've never heard of.</div>
+        </div>
+      </div>
+      <div class="why-pt">
+        <div class="why-pt-icon">📍</div>
+        <div>
+          <div class="why-pt-title">Hyderabad-based. Walk-in ready.</div>
+          <div class="why-pt-desc">Real clinic. Real face-to-face care. Online consultation also available. Not a delivery-only subscription you can't trust.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MEDICAL NOTE -->
+<div class="note-bar">
+  <div class="note-bar-inner">
+    <div class="note-bar-icon">⚕️</div>
+    <div>
+      <div class="note-bar-title">Medical Disclaimer</div>
+      <div class="note-pills-row">
+        <span class="note-pill">Program only under medical supervision</span>
+        <span class="note-pill">Dosage set by our specialist doctor</span>
+        <span class="note-pill">Not for casual or unsupervised use</span>
+        <span class="note-pill">Results vary per individual</span>
+        <span class="note-pill">Not a crash diet or supplement program</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="faq-inner">
+    <div class="faq-header">
+      <div class="section-label">FAQ</div>
+      <h2 class="big-title">Questions we<br><span class="italic">get asked a lot.</span></h2>
+      <p class="section-body">Everything you want to know before booking. If your question isn't here — just WhatsApp us.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item open">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Is Semaglutide safe? I've heard mixed things about Ozempic.</span>
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a">
+          <p class="faq-a-text">Semaglutide is <strong>FDA-approved and clinically proven</strong> for Type 2 diabetes and obesity. The concerns you've heard are mostly about people using it without medical supervision — wrong dosage, no monitoring, buying online. At O2, every patient is assessed by Dr. Thrivikram before prescription. Dosage is set based on your specific health profile. You're monitored every month. That's the difference between safe medical use and risky self-medication.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">What's the difference between Ozempic and Indian generic Semaglutide?</span>
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a">
+          <p class="faq-a-text"><strong>The active molecule is identical</strong> — Semaglutide. Ozempic is the branded version from Novo Nordisk, priced at ₹8,000–12,000/month. Indian generics are manufactured by companies like Dr. Reddy's, Sun Pharma, and Cipla under government-approved licenses — same pharmacological action, same clinical results, a fraction of the cost. This is exactly how generic paracetamol works the same as Crocin.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">I have PCOS / Thyroid. Will this program work for me?</span>
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a">
+          <p class="faq-a-text">Yes — and this is actually where most generic programs fail. <strong>PCOS and thyroid-related weight gain have different root causes</strong> than standard obesity. Dr. Thrivikram specifically evaluates your hormones, insulin resistance and thyroid levels before designing your plan. Semaglutide has shown strong results in PCOS-related insulin resistance. Your dietitian plan is also customised to your hormonal condition — not a generic chart.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">How much weight can I expect to lose and in how long?</span>
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a">
+          <p class="faq-a-text">Clinical studies show <strong>8–15% body weight loss over 3–6 months</strong> with Semaglutide + diet intervention. For a person at 90kg, that's 7–13kg in 3 months. Results vary based on your starting condition, adherence to the diet plan, and underlying medical factors. We track your progress every month and adjust the plan to keep you on course. We never promise results — we promise a medically designed system that gives you the best chance.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">What are the side effects of Semaglutide?</span>
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a">
+          <p class="faq-a-text">The most common side effects are <strong>mild nausea, reduced appetite and occasional digestive discomfort</strong> — especially in the first 2–4 weeks as your body adjusts. These typically reduce as dosage stabilises. Serious side effects are rare and are more likely with unsupervised use or wrong dosage. This is exactly why Dr. Thrivikram starts you on a low dose and increases gradually under monthly monitoring. You always have WhatsApp access between visits.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">₹1,999/month seems too affordable. What's the catch?</span>
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a">
+          <p class="faq-a-text">There is no catch. <strong>The Starter plan at ₹1,999 covers your doctor consultation, basic dietitian plan, and program entry.</strong> The medication cost is separate (Indian generics are ₹500–2,000/month depending on dose). Advanced and Comprehensive plans include more frequent visits and deeper monitoring. We're able to keep costs low because we're a Hyderabad-based clinic — not a VC-funded app with a marketing budget bigger than their care team.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Can I do this online? I'm not always able to visit in person.</span>
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a">
+          <p class="faq-a-text"><strong>Yes — online consultations are fully available.</strong> Dr. Thrivikram sees patients via video call. Prescriptions are issued digitally. Diet plans are sent via WhatsApp/email. The only thing we recommend in person is your initial blood work — but even that can be done at a local lab near you and shared with us. Many of our patients across Telangana and Andhra manage their entire program online.</p>
+        </div>
+      </div>
+    </div>
+    <div class="faq-lead-cta">
+      <div class="faq-lead-text">
+        <strong>Still have questions?</strong>
+        Our team answers within 30 minutes on WhatsApp — no waiting, no IVR.
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <a href="https://wa.me/919392205443?text=Hi%2C%20I%20have%20a%20question%20about%20the%20Weight%20Loss%20Program" target="_blank" style="background:#25d366;color:white;border:none;border-radius:50px;padding:12px 22px;font-size:13px;font-weight:700;font-family:'Syne',sans-serif;text-decoration:none;display:inline-flex;align-items:center;gap:6px;">💬 WhatsApp Us</a>
+        <a href="#book" style="background:var(--teal);color:var(--black);border:none;border-radius:50px;padding:12px 22px;font-size:13px;font-weight:700;font-family:'Syne',sans-serif;text-decoration:none;">Book Consultation →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="form-section" id="book">
+  <div class="form-glow"></div>
+  <div class="form-inner">
+    <div class="form-left">
+      <div class="section-label">Book Now</div>
+      <h2 class="big-title">Start your<br><span class="italic">program today.</span></h2>
+      <p class="section-body">Fill in your details. Our team will call you within 2 hours to set up your first consultation with Dr. Thrivikram S.</p>
+      <div class="form-promises">
+        <div class="form-promise">
+          <div class="form-promise-icon">📞</div>
+          <span class="form-promise-text">We call you back within 2 hours</span>
+        </div>
+        <div class="form-promise">
+          <div class="form-promise-icon">🆓</div>
+          <span class="form-promise-text">First assessment is free — no commitment</span>
+        </div>
+        <div class="form-promise">
+          <div class="form-promise-icon">🏥</div>
+          <span class="form-promise-text">Walk-in or online — your choice</span>
+        </div>
+        <div class="form-promise">
+          <div class="form-promise-icon">💰</div>
+          <span class="form-promise-text">Plans from just ₹1,999/month, all inclusive</span>
+        </div>
+      </div>
+    </div>
+    <div class="form-card">
+      <div class="form-card-title">Book Your Consultation</div>
+      <div class="form-card-sub">Free assessment · We'll call in 2 hours</div>
+      <div class="form-row">
+        <div class="fgroup">
+          <label>First Name</label>
+          <input type="text" placeholder="Your name">
+        </div>
+        <div class="fgroup">
+          <label>Phone Number</label>
+          <input type="tel" placeholder="+91 00000 00000">
+        </div>
+      </div>
+      <div class="fgroup">
+        <label>Your Primary Goal</label>
+        <select>
+          <option value="">Select your goal</option>
+          <option>General weight loss</option>
+          <option>Diabetes + weight loss</option>
+          <option>PCOS / hormonal weight gain</option>
+          <option>Thyroid-related weight gain</option>
+          <option>Wedding / event preparation</option>
+          <option>Post-pregnancy weight loss</option>
+        </select>
+      </div>
+      <div class="fgroup">
+        <label>Preferred Plan</label>
+        <select>
+          <option value="">Select a plan</option>
+          <option>Starter — ₹1,999/month</option>
+          <option>Advanced — ₹2,999/month (Most Popular)</option>
+          <option>Comprehensive — ₹4,999/month</option>
+          <option>Not sure yet — help me choose</option>
+        </select>
+      </div>
+      <button class="fsub" onclick="alert('Thank you! Our team will call you within 2 hours to confirm your appointment with Dr. Thrivikram.')">Book Free Consultation →</button>
+      <a href="https://wa.me/919392205443?text=Hi%2C%20I%20want%20to%20know%20more%20about%20the%20Weight%20Loss%20Program" class="fwhatsapp" target="_blank">💬 WhatsApp Us Instead</a>
+      <div class="fdisclaim">We never share your details. No spam. No cold calls from third parties.</div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="location-section">
+  <div class="location-inner">
+    <div class="location-left">
+      <div class="section-label">Find Us</div>
+      <h2 class="big-title">Visit us in<br><span class="italic">Hyderabad.</span></h2>
+      <p class="section-body" style="margin-bottom:28px;">Walk in or book an appointment. Online consultations also available for patients across Telangana and Andhra Pradesh.</p>
+      <div class="loc-cards">
+        <div class="loc-card">
+          <div class="loc-card-icon">📍</div>
+          <div>
+            <div class="loc-card-title">O2 Health Hub</div>
+            <div class="loc-card-addr">Hyderabad, Telangana<br>Find us on Google Maps →</div>
+          </div>
+        </div>
+        <div class="loc-card">
+          <div class="loc-card-icon">📞</div>
+          <div>
+            <div class="loc-card-title">Call / WhatsApp</div>
+            <div class="loc-card-addr">+91 9392205443<br>Available Mon–Sat, 9am–7pm</div>
+          </div>
+        </div>
+        <div class="loc-card">
+          <div class="loc-card-icon">🌐</div>
+          <div>
+            <div class="loc-card-title">Online Consultation</div>
+            <div class="loc-card-addr">Video call available<br>For patients across India</div>
+          </div>
+        </div>
+        <div class="loc-card">
+          <div class="loc-card-icon">🕐</div>
+          <div>
+            <div class="loc-card-title">Clinic Hours</div>
+            <div class="loc-card-addr">Mon – Sat: 9:00 AM – 7:00 PM<br>Sunday: By appointment only</div>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:28px;">
+        <a href="https://maps.google.com/maps/place/O2+Health+Hub/data=!4m2!3m1!1s0x0:0x6a9ba0ed4acbd6aa" target="_blank" class="btn-teal" style="font-size:13px;padding:12px 22px;">📍 Open in Google Maps</a>
+        <a href="https://wa.me/919392205443?text=Hi%2C%20I%27d%20like%20to%20visit%20O2%20Health%20Hub" target="_blank" class="btn-ghost" style="font-size:13px;padding:12px 22px;">💬 WhatsApp for Directions</a>
+      </div>
+    </div>
+    <div class="location-map">
+      <div class="map-frame">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1000!2d78.4867!3d17.3850!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6a9ba0ed4acbd6aa!2sO2%20Health%20Hub!5e0!3m2!1sen!2sin!4v1234567890"
+          width="100%"
+          height="100%"
+          style="border:0;border-radius:20px;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <a href="https://maps.google.com/maps/place/O2+Health+Hub/data=!4m2!3m1!1s0x0:0x6a9ba0ed4acbd6aa" target="_blank" class="map-directions-btn">
+        🗺️ Get Directions
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">
+          <div class="footer-logo-sq">O2</div>
+          <span class="footer-brand-name">O2 Health Hub</span>
+        </div>
+        <div class="footer-tagline">Your Specialist. Your Plan. Your Results.</div>
+      </div>
+      <div class="footer-contact-block">
+        <div class="footer-phone">9392205443</div>
+        <div class="footer-addr">Hyderabad, Telangana<br>Online Consultations Also Available</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 O2 Health Hub. All rights reserved. Results vary per individual. Program under medical supervision only.</span>
+      <div class="footer-links-row">
+        <a href="#" class="footer-link">Privacy Policy</a>
+        <a href="#" class="footer-link">Terms</a>
+        <a href="#" class="footer-link">Refund Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- STICKY -->
+<div class="sticky-cta">
+  <div class="sticky-left">
+    <span class="sticky-badge">Medical Weight Loss</span>
+    <span class="sticky-text">Plans from <strong>₹1,999/month</strong> · Doctor + Dietitian + Semaglutide</span>
+  </div>
+  <div class="sticky-right">
+    <a href="tel:9392205443" class="sticky-call">📞 Call Now</a>
+    <a href="#book" class="sticky-book">Book Free Consultation →</a>
+  </div>
+</div>
+
+<script>
+function toggleTheme(){
+  const body=document.body;
+  const track=document.getElementById('toggleTrack');
+  const label=document.getElementById('toggleLabel');
+  body.classList.toggle('light-mode');
+  const isLight=body.classList.contains('light-mode');
+  track.classList.toggle('on',isLight);
+  label.textContent=isLight?'🌙 Dark':'☀️ Light';
+  localStorage.setItem('theme',isLight?'light':'dark');
+}
+(function(){
+  const saved=localStorage.getItem('theme');
+  if(saved==='light'){
+    document.body.classList.add('light-mode');
+    const track=document.getElementById('toggleTrack');
+    const label=document.getElementById('toggleLabel');
+    if(track){track.classList.add('on');}
+    if(label){label.textContent='🌙 Dark';}
+  }
+})();
+
+function toggleFaq(el){
+  const item=el.closest('.faq-item');
+  const isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i=>{
+    i.classList.remove('open');
+  });
+  if(!isOpen){item.classList.add('open');}
+}
+</script>
+</body>
+</html>
